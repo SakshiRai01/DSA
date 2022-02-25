@@ -4,26 +4,22 @@ using namespace std;
 int main()
 {
     int n;
-    cout << "Enter n to print pattern : ";
     cin >> n;
-
-    int nspaces = n - 1;
-    int nstars = 1;
-
+    int nspace = 0;
+    int nstar = n;
     for (int i = 1; i <= n; i++)
     {
-        for (int j = 1; j <= nspaces; j++)
+        for (int j = 1; j <= nspace; j++)
         {
             cout << "\t";
         }
-
-        for (int j = 1; j <= nstars; j++)
+        for (int j = 1; j <= nstar; j++)
         {
             cout << "*\t";
         }
 
-        nspaces--;
-        nstars++;
+        nstar--;
+        nspace++;
         cout << endl;
     }
 }
