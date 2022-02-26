@@ -16,8 +16,10 @@ int DecToAny(int n, int b)
 int main()
 {
     int n;
-    int b;
+    cout << "Enter the number : ";
     cin >> n;
+    int b;
+    cout << "Enter the base of the number : ";
     cin >> b;
     int res = DecToAny(n, b);
     cout << res << endl;

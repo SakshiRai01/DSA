@@ -19,7 +19,7 @@ int main()
     cout << "Enter the number : ";
     cin >> n;
     int b;
-    cout << "Enter the base of thr number : ";
+    cout << "Enter the base of the number : ";
     cin >> b;
     int res = AnyToDec(n, b);
     cout << res << endl;
