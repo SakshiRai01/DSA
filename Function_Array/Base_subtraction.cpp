@@ -3,27 +3,28 @@ using namespace std;
 
 int getDifference(int b, int n1, int n2)
 {
-    int power = 1, ans = 0, carry = 0;
-    while (n2)
+    int rv = 0, c = 0, p = 1;
+    while (n2 > 0)
     {
-        int l1 = n1 % 10;
-        int l2 = n2 % 10;
+        int d1 = n1 % 10;
+        int d2 = n2 % 10;
         n1 /= 10;
         n2 /= 10;
-        int temp = l2 - l1 + carry;
-        if (temp < 0)
+        int d = d2 - d1 - c;
+
+        if (d < 0)
         {
-            carry = -1;
-            temp += b;
+            c = 1;
+            d += b;
         }
         else
         {
-            carry = 0;
+            c = 0;
         }
-        ans += temp * power;
-        power *= 10;
+        rv += d * p;
+        p *= 10;
     }
-    return ans;
+    return rv;
 }
 
 int main()
